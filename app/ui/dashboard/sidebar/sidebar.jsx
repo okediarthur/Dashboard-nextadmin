@@ -52,11 +52,6 @@ const menuItems = [
                 path: "/dashboard/help",
                 icon: <MdOutlineHelpCenter />,
             },
-            {
-                title: "Logout",
-                path: "/dashboard/logout",
-                icon: <MdExitToApp />,
-            },
         ],
     },
 ];
@@ -81,6 +76,10 @@ const  Sidebar = () => {
                 </li>
             ))}
         </ul>
+        <button className={styles.logout}>
+            <MdExitToApp />
+            Logout
+        </button>
         </div>
     );
 };
