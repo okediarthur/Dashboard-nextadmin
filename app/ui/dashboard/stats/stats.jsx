@@ -16,7 +16,8 @@ const Stats = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <div className={styles.user}>
+                        <td>
+                            <div className={styles.user}>
                                 <Image 
                                 src="/noavatar.png" 
                                 alt="User Image" 
@@ -26,6 +27,7 @@ const Stats = () => {
                             />
                             +256784922032
                             </div>
+                        </td>
                         <td>Polio Vaccination</td>
                         <td>
                             <span className={`${styles.status} ${styles.done}`}>done
@@ -34,7 +36,8 @@ const Stats = () => {
                         <td>19.04.2024</td>
                     </tr>
                     <tr>
-                        <div className={styles.user}>
+                        <td>
+                            <div className={styles.user}>
                                 <Image 
                                 src="/noavatar.png" 
                                 alt="User Image" 
@@ -44,6 +47,7 @@ const Stats = () => {
                             />
                             +256784922032
                             </div>
+                        </td>
                         <td>Malaria Sensitisation</td>
                         <td>
                             <span className={`${styles.status} ${styles.cancelled}`}>cancelled
@@ -52,7 +56,8 @@ const Stats = () => {
                         <td>1.05.2024</td>
                     </tr>
                     <tr>
-                        <div className={styles.user}>
+                        <td>
+                            <div className={styles.user}>
                                 <Image 
                                 src="/noavatar.png" 
                                 alt="User Image" 
@@ -62,6 +67,7 @@ const Stats = () => {
                             />
                             +256784922032
                             </div>
+                        </td>
                         <td>Polio Vaccination</td>
                         <td>
                             <span className={`${styles.status} ${styles.pending}`}>pending
@@ -70,7 +76,8 @@ const Stats = () => {
                         <td>14.02.2024</td>
                     </tr>
                     <tr>
-                        <div className={styles.user}>
+                        <td>
+                            <div className={styles.user}>
                                 <Image 
                                 src="/noavatar.png" 
                                 alt="User Image" 
@@ -80,6 +87,7 @@ const Stats = () => {
                             />
                             +256784922032
                             </div>
+                        </td>
                         <td>USE Resumption</td>
                         <td>
                             <span className={`${styles.status} ${styles.done}`}>done
