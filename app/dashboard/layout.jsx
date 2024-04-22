@@ -4,6 +4,7 @@ import Sidebar from "../ui/dashboard/sidebar/sidebar"
 // import Status from "../ui/dashboard/campStatus/campStatus";
 // import Calls from "../ui/dashboard/callStatus/callStatus";
 import styles from "../ui/dashboard/dashboard.module.css"
+import Footer from "../ui/dashboard/footer/footer"
 
 const  Layout = ({children}) => {
     return (
@@ -14,11 +15,7 @@ const  Layout = ({children}) => {
             <div className={styles.content}>
                 <Navbar/>
                 {children}
-                {/* <div className={styles.row}>
-                    <Campaign/>
-                    <Status/>
-                    <Calls/>
-                </div> */}
+                <Footer />
             </div>
         </div>
     )

@@ -1,25 +1,25 @@
 import Search from '@/app/ui/dashboard/search/search';
-import styles from '@/app/ui/dashboard/profile/profile.module.css';
+import styles from '@/app/ui/dashboard/campaigns/campaigns.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import Pagination from '@/app/ui/dashboard/pagination/pagination';
 
-const  Profile = () => {
+const  Campaigns = () => {
     return (
         <div className={styles.container}>
             <div className={styles.top}>
-                <Search placeholder="Search for a user..." />
-                <Link href="/dashboard/users/add">
+                <Search placeholder="Search for a Campaign..." />
+                <Link href="/dashboard/campaigns/add">
                     <button className={styles.addButton}>Add New</button>
                 </Link>
             </div>
             <table className={styles.table}>
                 <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Email</td>
-                        <td>Created at</td>
-                        <td>Role</td>
+                        <td>Title</td>
+                        <td>Campaign</td>
+                        <td>Duration</td>
+                        <td>Created on</td>
                         <td>Status</td>
                         <td>Action</td>
                     </tr>
@@ -27,14 +27,14 @@ const  Profile = () => {
                 <tbody>
                     <tr>
                         <td>
-                            <div className={styles.user}>
-                                <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage}/>
-                                John Doe
+                            <div className={styles.campaign}>
+                                <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.campaignImage}/>
+                                Ministry of Health
                             </div>
                         </td>
-                        <td>john@gmail.com</td>
-                        <td>13.01.2024</td>
-                        <td>Admin</td>
+                        <td>Polio Campaign</td>
+                        <td>6 Months</td>
+                        <td>19.04.2024</td>
                         <td>Active</td>
                         <td>
                             <div className={styles.buttons}>
@@ -53,4 +53,4 @@ const  Profile = () => {
     )
 }
 
-export default Profile
+export default Campaigns

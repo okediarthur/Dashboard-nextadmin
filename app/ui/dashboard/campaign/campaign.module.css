@@ -20,8 +20,9 @@
 }
 
 .button{
-    background-color: #2e374a;
+    background-color: #5d57c9;
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    border: none;
+    color: var(--text);
 }
