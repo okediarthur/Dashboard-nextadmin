@@ -4,10 +4,10 @@ const AddProfilePage = () => {
     return (
         <div className={styles.container}>
             <form action="" className={styles.form}>
-                <input type="text" placeholder='username' name='username' required />
-                <input type="email" placeholder='email' name='email' required />
-                <input type="password" placeholder='password' name='password' required />
-                <input type="phone" placeholder='phone' name='phone' />
+                <input type="text" placeholder='Username' name='Username' required />
+                <input type="email" placeholder='Email' name='Email' required />
+                <input type="password" placeholder='Password' name='Password' required />
+                <input type="phone" placeholder='Phone' name='Phone' />
                 <select name="isAdmin" id="isAdmin">
                     <option value={false}>Is Admin?</option>
                     <option value={true}>Yes</option>
