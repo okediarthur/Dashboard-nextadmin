@@ -39,3 +39,43 @@ const userSchema = new mongoose.Schema({
     },
     { timestamps: true }
 );
+
+
+const campaignSchema = new mongoose.Schema({
+        title: {
+            type: string,
+            required: true,
+            unique: true,
+        },
+        desc: {
+            type: string,
+            required: true,
+        },
+        region: {
+            type: string,
+            required: true,
+        },
+        Dept: {
+            type: string,
+            required: true,
+        },
+        duration: {
+            type: string,
+            required: true,
+            min: 0,
+        },
+        EndDate: {
+            type: string,
+            required: true,
+            min: 0,
+        },
+        img: {
+            type: string,
+        },
+
+    },
+    { timestamps: true }
+);
+
+export const User = mongoose.models.User || mongoose.model("User",userScehma)
+export const Campaign = mongoose.models.Campaign || mongoose.model("Campaign",campaignScehma)
