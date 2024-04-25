@@ -2,23 +2,23 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
         username: {
-            type: string,
+            type: String,
             required: true,
             unique: true,
             min: 3,
             max: 20,
         },
         email: {
-            type: string,
+            type: String,
             required: true,
             unique: true,
         },
         password: {
-            type: string,
+            type: String,
             required: true,
         },
         img: {
-            type: string,
+            type: String,
             required: true,
         },
         isAdmin: {
@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
             type: String, 
         },
         address: {
-            type: string,
+            type: String,
         },
 
     },
@@ -43,39 +43,39 @@ const userSchema = new mongoose.Schema({
 
 const campaignSchema = new mongoose.Schema({
         title: {
-            type: string,
+            type: String,
             required: true,
             unique: true,
         },
         desc: {
-            type: string,
+            type: String,
             required: true,
         },
         region: {
-            type: string,
+            type: String,
             required: true,
         },
         Dept: {
-            type: string,
+            type: String,
             required: true,
         },
         duration: {
-            type: string,
+            type: String,
             required: true,
             min: 0,
         },
         EndDate: {
-            type: string,
+            type: String,
             required: true,
             min: 0,
         },
         img: {
-            type: string,
+            type: String,
         },
 
     },
     { timestamps: true }
 );
 
-export const User = mongoose.models.User || mongoose.model("User",userScehma)
-export const Campaign = mongoose.models.Campaign || mongoose.model("Campaign",campaignScehma)
+export const User = mongoose.models.User || mongoose.model("User",userSchema)
+export const Campaign = mongoose.models.Campaign || mongoose.model("Campaign",campaignSchema)
