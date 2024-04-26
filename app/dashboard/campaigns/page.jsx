@@ -3,8 +3,13 @@ import styles from '@/app/ui/dashboard/campaigns/campaigns.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import Pagination from '@/app/ui/dashboard/pagination/pagination';
+// import { SearchParams } from 'next/navigation'
+import { fetchCampaigns } from '@/app/lib/data';
 
-const  Campaigns = () => {
+const  Campaigns = async ({ SearchParams }) => {
+    const q = SearchParams?.q || '';
+    const page = SearchParams?.page || 1;
+    const {count, campaigns} = await fetchCampaigns(q, page);
     return (
         <div className={styles.container}>
             <div className={styles.top}>
@@ -25,30 +30,32 @@ const  Campaigns = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <div className={styles.campaign}>
-                                <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.campaignImage}/>
-                                Ministry of Health
-                            </div>
-                        </td>
-                        <td>Polio Campaign</td>
-                        <td>6 Months</td>
-                        <td>19.04.2024</td>
-                        <td>Active</td>
-                        <td>
-                            <div className={styles.buttons}>
-                                <Link href="/dashboard/campaigns/test">
-                                <button className={`${styles.button} ${styles.view}`}>View</button>
-                            </Link>
-                                <button className={`${styles.button} ${styles.delete}`}>delete</button>
-                            </div>
-                            
-                        </td>
-                    </tr>
+                    {campaigns.map((campaign) => {
+                        <tr key={campaign.id}>
+                            <td>
+                                <div className={styles.campaign}>
+                                    <Image src={campaign.img || "/noavatar.png"} alt="" width={40} height={40} className={styles.campaignImage}/>
+                                    {campaign.title}
+                                </div>
+                            </td>
+                            <td>{campaign.campaign}</td>
+                            <td>{campaign.duration}</td>
+                            <td>{campaign.createdAt?.toString().splice(4, 16)}</td>
+                            <td>{campaign.isActive ? "Active" : "Passive"}</td>
+                            <td>
+                                <div className={styles.buttons}>
+                                    <Link href={`/dashboard/campaigns/${campaign.id}`}>
+                                    <button className={`${styles.button} ${styles.view}`}>View</button>
+                                </Link>
+                                    <button className={`${styles.button} ${styles.delete}`}>delete</button>
+                                </div>
+                                
+                            </td>
+                        </tr>
+                    })}
                 </tbody>
             </table>
-            <Pagination/>
+            <Pagination count={count} />
         </div>
     )
 }

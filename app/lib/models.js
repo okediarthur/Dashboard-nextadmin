@@ -47,15 +47,11 @@ const campaignSchema = new mongoose.Schema({
             required: true,
             unique: true,
         },
-        desc: {
+        campaign: {
             type: String,
             required: true,
         },
         region: {
-            type: String,
-            required: true,
-        },
-        Dept: {
             type: String,
             required: true,
         },
@@ -64,10 +60,9 @@ const campaignSchema = new mongoose.Schema({
             required: true,
             min: 0,
         },
-        EndDate: {
-            type: String,
-            required: true,
-            min: 0,
+        isActive: {
+            type: Boolean,
+            default: true,
         },
         img: {
             type: String,

@@ -22,7 +22,7 @@ const  Profile = async ( {searchParams} ) => {
                     <tr>
                         <td>Name</td>
                         <td>Email</td>
-                        <td>Created at</td>
+                        <td>Created on</td>
                         <td>Role</td>
                         <td>Status</td>
                         <td>Action</td>
