@@ -20,7 +20,7 @@ const Search = ({placeholder}) => {
         }
         replace(`${pathname}?${params}`);
 
-    });
+    },300);
     return(
         <div className={styles.container}>
             <MdSearch/>
