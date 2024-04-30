@@ -1,13 +1,14 @@
+import { addUser } from '@/app/lib/actions';
 import styles from '@/app/ui/dashboard/profile/addProfile/addProfile.module.css'
 
 const AddProfilePage = () => {
     return (
         <div className={styles.container}>
-            <form action="" className={styles.form}>
-                <input type="text" placeholder='Username' name='Username' required />
-                <input type="email" placeholder='Email' name='Email' required />
-                <input type="password" placeholder='Password' name='Password' required />
-                <input type="phone" placeholder='Phone' name='Phone' />
+            <form action={addUser} className={styles.form}>
+                <input type="text" placeholder='Username' name='username' required />
+                <input type="email" placeholder='Email' name='email' required />
+                <input type="password" placeholder='Password' name='password' required />
+                <input type="phone" placeholder='Phone' name='phone' />
                 <select name="isAdmin" id="isAdmin">
                     <option value={false}>Is Admin?</option>
                     <option value={true}>Yes</option>

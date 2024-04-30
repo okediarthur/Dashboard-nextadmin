@@ -20,9 +20,11 @@
 }
 
 .button{
-    background-color: #5d57c9;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
+    width: 100%;
+    padding: 20px;
+    background-color: teal;
     color: var(--text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
